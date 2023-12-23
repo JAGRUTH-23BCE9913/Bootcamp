@@ -1,0 +1,24 @@
+from datetime import datetime
+user_input = ""
+while "exit" not in user_input and "quit" not in user_input:
+    user_input = input("Hey, how can I help you today? Type 'exit' or 'quit' to end the conversation: ")
+    if "hello" in user_input:
+        print("Hi back!")
+    elif "how are you" in user_input:
+        print("I'm good, hope you're doing well too!")
+    elif "fun" in user_input:
+        print("Try playing games, reading a book, or exploring a new hobby for fun.")
+    elif "time" in user_input:
+        print("The current time is:", datetime.now())
+    elif "hungry" in user_input:
+        print("You can try eating something!")
+    elif "not hungry" in user_input:
+        print("That's great! If you get hungry later, feel free to grab a snack.")
+    elif "thirsty" in user_input:
+        print("Try having some water!")
+    elif "not thirsty" in user_input:
+        print("Awesome! Staying hydrated is important, though. Drink water when you can.")
+    elif any(keyword in user_input for keyword in ["exit", "quit"]):
+        print("Ending the conversation. Goodbye!")
+    else:
+        print("Sorry, I can't understand that. Feel free to ask something else.")
